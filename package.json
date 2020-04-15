@@ -1,0 +1,14 @@
+{
+    "name": "advancecss",
+    "version": "1.0.0",
+    "description": "landiing page for advacecss",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "node-sass AdvanceCSS/sass/main.scss AdvanceCSS/css/style.css -w"
+    },
+    "author": "attaulla",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^4.13.1"
+    }
+}
