@@ -50,13 +50,13 @@
         background-blend-mode: screen; //this make some opacity and filter for image along color
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url("/AdvanceCSS/image/card1.jpg");
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url("/image/card1.jpg");
         }
         &--2 {
-            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url("/AdvanceCSS/image/card2.jpg");
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url("/image/card2.jpg");
         }
         &--3 {
-            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url("/AdvanceCSS/image/card3.jpg");
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url("/image/card3.jpg");
         }
     }
     &__heading {
