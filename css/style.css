@@ -1,3 +1,10 @@
+/*
+0-600       Phone
+600-900     Tablet Potrait
+900-1200    Tablet Landcape
+[1200-1800] is where is Normal style apply
+1800+       Big Desktop
+*/
 @import url(../css/font-cion.css);
 @keyframes moveleft {
   0% {
@@ -95,7 +102,7 @@ body {
   margin-bottom: 1.5rem; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 3rem; }
+  margin-bottom: 4rem; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
@@ -705,3 +712,63 @@ body {
 .navigation__chackbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(119, 119, 119, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    box-shadow: 0 2rem 4rem rgba(119, 119, 119, 0.8);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all .4s .2s; }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    width: 100%;
+    display: block;
+    transition: all .3s; }
+  .popup__text {
+    font-size: 1.4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #777;
+    hyphens: auto; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close {
+    text-decoration: none;
+    font-size: 4rem;
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    color: #777;
+    line-height: 1; }
+    .popup__close:hover {
+      color: #55c57a; }
