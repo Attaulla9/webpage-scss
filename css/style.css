@@ -657,10 +657,12 @@ body {
     width: 50%; }
     @media (max-width: 75em) {
       .book__form {
-        width: 65%; } }
+        width: 65%;
+        padding: 4rem; } }
     @media (max-width: 56.25em) {
       .book__form {
-        width: 100%; } }
+        width: 100%;
+        padding: 3rem; } }
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
