@@ -1,54 +1,70 @@
 body {
     font-weight: 400;
-    font-size: 16px;
+    //font-size: 16px;
     line-height: 1.7;
     color: $color-dark;
-    padding: 26px;
 }
 
 .header-primary {
     color: $color-white;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 6rem;
     &-main {
         display: block;
-        font-size: 60px;
+        font-size: 6rem;
         font-weight: 400;
-        letter-spacing: 35px;
+        letter-spacing: 3.5rem;
         animation: moveleft 1s;
-    }
+        @include respond(phone) {
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
+    } 
     &-sub {
         display: block;
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: 700;
-        letter-spacing: 17.4px;
-        animation: moveRight 1s;
+        letter-spacing: 1.75rem;
+        animation: moveRight 1s ease-out;
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
-.heading-secondary{
+
+.heading-secondary {
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     -webkit-background-clip: text;
     color: transparent;
     transition: all .2s;
-    letter-spacing: 2px;
+    letter-spacing: .2rem;
 
-    &:hover{
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+    &:hover {
         transform: skewY(2deg) skewX(15deg);
-        text-shadow: .5rem 1rem 2rem rgba($color-dark,.2rem);
+        text-shadow: .5rem 1rem 2rem rgba($color-dark, .2rem);
     }
 }
-.heading-tertiary{
+
+.heading-tertiary {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
 }
-.paragraph{
+
+.paragraph {
     font-size: $default-font-size;
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 3rem;
     }
 }
